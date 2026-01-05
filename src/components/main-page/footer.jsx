@@ -1,3 +1,12 @@
+import { Link } from "react-router-dom";
+const links = [
+  { slug: "ai-automation", title: "AI & Workflow Automation" },
+  { slug: "it-consulting", title: "IT Consulting" },
+  { slug: "software-development", title: "Software Development" },
+  { slug: "it-support", title: "IT Support" },
+  { slug: "web-development", title: "Web Development" },
+  { slug: "knowledge-management", title: "Knowledge Management" },
+];
 function Footer() {
   return (
     <footer>
@@ -18,24 +27,16 @@ function Footer() {
           <div className="footer-links">
             <h3>Services</h3>
             <ul>
-              <li>
-                <a href="#services">AI & Workflow Automation</a>
-              </li>
-              <li>
-                <a href="#services">IT Consulting</a>
-              </li>
-              <li>
-                <a href="#services">IT Support</a>
-              </li>
-              <li>
-                <a href="#services">Software Development</a>
-              </li>
-              <li>
-                <a href="#services">Web Development</a>
-              </li>
-              <li>
-                <a href="#services">Knowledge Management</a>
-              </li>
+              {links.map((s) => (
+                <li>
+                  <Link
+                    to={`/services/${s.slug}`}
+                    className="service-card-link"
+                  >
+                    <div>{s.title}</div>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
