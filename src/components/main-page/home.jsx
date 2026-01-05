@@ -1,0 +1,63 @@
+import { useSearchParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Features from "./features";
+import Hero from "./hero";
+import Testimonials from "./testimonials";
+import Contact from "./contact";
+import About from "./about";
+import Services from "./services";
+import Seo from "./seo";
+import { orgSchema } from "../../../seoSchema";
+import Systems from "./systems";
+import Clients from "./clients";
+
+function Home() {
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [params, setParams] = useSearchParams();
+
+  useEffect(() => {
+    if (params.get("scrollToContact") === "true") {
+      setShowContactForm(true);
+      setParams({});
+    }
+  }, [params, setParams]);
+
+  useEffect(() => {
+    if (showContactForm) {
+      const timeout = setTimeout(() => {
+        const contactElement = document.getElementById("contact");
+        if (contactElement) {
+          contactElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [showContactForm]);
+
+  return (
+    <>
+      <Seo
+        title="Haarper | Expert IT Support & Custom Software Solutions"
+        description="We help businesses, digital nomads, and families with reliable IT support and custom software tailored to their needs."
+        url="https://haarper.pt/"
+        image="https://haarper.pt/logo_white.svg"
+        structuredData={orgSchema}
+      />
+      <Hero onScheduleClick={() => setShowContactForm(true)} />
+      <Services />
+      <Systems />
+      <Features />
+      <Clients />
+      <Testimonials />
+
+      <Contact
+        showContactForm={showContactForm}
+        setShowContactForm={setShowContactForm}
+      />
+      <About />
+    </>
+  );
+}
+
+export default Home;
