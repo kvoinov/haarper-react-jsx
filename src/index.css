@@ -28,6 +28,7 @@ body {
 #why-us,
 #testimonials,
 #clients,
+#policy,
 #services-page,
 #events {
   scroll-margin-top: 7.5rem;
@@ -927,6 +928,13 @@ footer {
 
 .policy h3 {
   font-size: 15px;
+}
+
+.policy h1,
+.policy h2,
+.policy h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .systems {

@@ -39,7 +39,7 @@ function Home() {
     <>
       <Seo
         title="Haarper | Expert IT Support & Custom Software Solutions"
-        description="We help businesses, digital nomads, and families with reliable IT support and custom software tailored to their needs."
+        description="Eliminate operational inefficiencies with AI automation, custom software development, and strategic IT consulting. Scalable solutions for growing businesses."
         url="https://haarper.pt/"
         image="https://haarper.pt/logo_white.svg"
         structuredData={orgSchema}

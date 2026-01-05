@@ -14,7 +14,7 @@ function CaseStudy() {
 
   if (!study) {
     return (
-      <div className="container" style={{ padding: "6rem 0" }}>
+      <div className="container" style={{ padding: "8rem 0" }}>
         <h2>Case study not found</h2>
         <p>The case study you requested does not exist.</p>
       </div>

@@ -56,7 +56,10 @@ function Footer() {
               <li>
                 <a href="#testimonials">Testimonials</a>
               </li>
-              <li></li>
+              <li>
+                {" "}
+                <Link to={`/privacy-policy`}>Privacy Policy</Link>
+              </li>
               <li></li>
             </ul>
           </div>
@@ -77,7 +80,10 @@ function Footer() {
           </div>
         </div>
 
-        <div className="copyright">© 2025 Haarper. All rights reserved.</div>
+        <div className="copyright">
+          © {new Date().getFullYear()} Haarper Technologies. All rights
+          reserved.
+        </div>
       </div>
     </footer>
   );

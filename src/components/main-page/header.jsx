@@ -95,7 +95,7 @@ function Header({ onScheduleClick }) {
                     {nav.label}
                   </a>
                 ) : (
-                  <a href={nav.href}>{nav.label}</a>
+                  <Link to={nav.href}>{nav.label}</Link>
                 )}
               </li>
             ))}
