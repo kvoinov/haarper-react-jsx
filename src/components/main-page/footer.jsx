@@ -18,7 +18,11 @@ function Footer() {
             </a>
 
             <div className="social-links">
-              <a href="#" className="social-link">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/company/haarper/"
+                className="social-link"
+              >
                 <img src="/assets/linked.svg" alt="LinkedIn" />
               </a>
             </div>
