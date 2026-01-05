@@ -35,7 +35,7 @@ function EventList() {
         structuredData={orgSchema}
       />
 
-      <section className="services events" id="events">
+      <section className="events" id="events">
         <div className="container">
           <h2 className="section-title">Upcoming events</h2>
 
