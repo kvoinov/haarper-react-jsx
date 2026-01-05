@@ -1,0 +1,273 @@
+{
+  "remax": {
+    "title": "Complete Automation & AI Integration Overhaul for RE/MAX",
+    "imageClient": "/assets/clients/remax.png",
+    "imageStudy": "/assets/case-studies/case-study-remax.png",
+    "content": [
+      {
+        "type": "h2",
+        "value": "The Challenge"
+      },
+      {
+        "type": "p",
+        "value": "A rapidly growing RE/MAX brokerage approached us with a critical operational problem: fragmented systems and manual processes that were preventing them from scaling effectively and maximizing agent productivity."
+      },
+      {
+        "type": "h3",
+        "value": "Their key pain points included:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          {
+            "text": "Disconnected MLS data and HubSpot CRM"
+          },
+          {
+            "text": "Manual follow-ups with leads inactive for 30+ days"
+          },
+          {
+            "text": "No systematic client nurturing for past buyers/sellers"
+          },
+          {
+            "text": "Limited automated communication channels for property updates"
+          },
+          {
+            "text": "Complex multi-platform newsletter management requiring manual intervention"
+          },
+          {
+            "text": "Missing automated onboarding sequences for new agents and clients"
+          },
+          {
+            "text": "No systematic reminders for agents to follow up with qualified leads"
+          },
+          {
+            "text": "Inability to intelligently prioritize leads based on buying/selling readiness"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "value": "Our Approach"
+      },
+      {
+        "type": "p",
+        "value": "We implemented a comprehensive solution in two strategic phases to ensure seamless integration and optimal results:"
+      },
+      {
+        "type": "h3",
+        "value": "Phase 1 - Core Integration Foundation"
+      },
+      {
+        "type": "p",
+        "value": "Initial implementation: HubSpot and MLS connectivity, client subscription module deployment, automated lead re-engagement campaigns, and WhatsApp integration via Cue."
+      },
+      {
+        "type": "h3",
+        "value": "Phase 2 - Advanced Automation & AI Ecosystem"
+      },
+      {
+        "type": "p",
+        "value": "Full-scale deployment: Custom automation scripts connecting 7 platforms, AI-powered lead scoring and property matching, advanced email sequences via SendGrid, multi-channel client and agent onboarding, and sophisticated nurturing workflows. We eliminated dependency on third-party automation platforms to avoid limitations and ongoing overhead costs."
+      },
+      {
+        "type": "h2",
+        "value": "The Solution We Delivered"
+      },
+      {
+        "type": "h3",
+        "value": "Integration Architecture:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          {
+            "text": "Real-time data synchronization between HubSpot and MLS systems"
+          },
+          {
+            "text": "Custom client subscription module tailored to their real estate operations"
+          },
+          {
+            "text": "Automated re-engagement campaigns targeting leads inactive for 30+ days"
+          },
+          {
+            "text": "WhatsApp property alerts and appointment reminders via Cue integration"
+          },
+          {
+            "text": "Dynamic newsletter delivery system for market updates within HubSpot"
+          },
+          {
+            "text": "Automated welcome sequences for new clients and agent onboarding"
+          },
+          {
+            "text": "Weekly and monthly follow-up reminders for high-value leads"
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "value": "AI-Powered Intelligence Layer:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          {
+            "text": "Smart Lead Scoring: AI algorithm analyzing engagement patterns, property views, search behavior, and demographic data to prioritize hottest prospects"
+          },
+          {
+            "text": "Intelligent Property Matching: Machine learning system automatically matching client preferences with new listings and sending personalized recommendations"
+          },
+          {
+            "text": "Predictive Buyer/Seller Readiness: AI model identifying leads most likely to transact in next 30/60/90 days based on behavioral signals"
+          },
+          {
+            "text": "Automated Market Analysis: AI-generated comparative market analyses (CMAs) for instant property valuations"
+          },
+          {
+            "text": "Natural Language Processing: AI chatbot handling initial inquiries, qualifying leads, and scheduling viewings 24/7"
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "value": "Technical Implementation:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          {
+            "text": "Custom-built automation scripts eliminating third-party dependencies"
+          },
+          {
+            "text": "Multi-platform connectivity across 7 different systems"
+          },
+          {
+            "text": "AI model training and deployment on client data"
+          },
+          {
+            "text": "Complete workflow documentation and training materials"
+          },
+          {
+            "text": "Full client ownership and control without ongoing subscription costs"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "value": "Results and Value Delivered"
+      },
+      {
+        "type": "h3",
+        "value": "Project Efficiency:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          {
+            "text": "Complete delivery in short period from system access"
+          },
+          {
+            "text": "Zero downtime during implementation"
+          },
+          {
+            "text": "Seamless integration across all platforms"
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "value": "Operational Impact:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          {
+            "text": "100% automated data synchronization eliminating manual data entry across MLS and CRM"
+          },
+          {
+            "text": "Systematic lead re-engagement saving agents 20+ hours per week"
+          },
+          {
+            "text": "AI lead scoring increasing conversion rates by identifying priority prospects"
+          },
+          {
+            "text": "Direct WhatsApp communication capabilities for improved client engagement"
+          },
+          {
+            "text": "Intelligent property matching reducing time-to-show by 40%"
+          },
+          {
+            "text": "24/7 AI chatbot capturing and qualifying leads outside business hours"
+          },
+          {
+            "text": "Complete ownership transfer of all automations and AI configurations"
+          },
+          {
+            "text": "Eliminated ongoing third-party subscription costs through custom script implementation"
+          },
+          {
+            "text": "Full control over automation logic and AI models without platform limitations"
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "value": "Business Growth:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          {
+            "text": "Agents freed to focus on high-value client interactions"
+          },
+          {
+            "text": "Improved lead conversion through intelligent prioritization"
+          },
+          {
+            "text": "Enhanced client experience with personalized, timely communications"
+          },
+          {
+            "text": "Scalable infrastructure supporting brokerage expansion"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "value": "Key Success Factors"
+      },
+      {
+        "type": "ul",
+        "items": [
+          {
+            "text": "Rapid Implementation: Focused delivery window with clear milestones and completion criteria"
+          },
+          {
+            "text": "Comprehensive Planning: Detailed mapping of all integration points and data flows before implementation"
+          },
+          {
+            "text": "AI Integration Strategy: Thoughtful deployment of machine learning for lead scoring, property matching, and predictive analytics where it delivers measurable ROI"
+          },
+          {
+            "text": "Custom Script Architecture: Strategic decision to eliminate third-party automation dependencies, avoiding platform limitations and ongoing subscription overhead while providing complete client control"
+          },
+          {
+            "text": "Multi-Platform Expertise: Deep knowledge across HubSpot, MLS systems, custom automation development, WhatsApp integration, AI/ML implementation"
+          },
+          {
+            "text": "Complete Ownership Model: Client retains full control and access to all systems and AI models post-delivery"
+          },
+          {
+            "text": "Risk Management: Strict confidentiality protocols and secure access management throughout the project"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "value": "The Bottom Line"
+      },
+      {
+        "type": "p",
+        "value": "This project demonstrates how strategic automation combined with AI intelligence can transform real estate operations in under a week. By connecting disparate systems, automating manual processes, and deploying intelligent lead management, we helped this RE/MAX brokerage create a scalable foundation for growth while empowering agents to focus on what they do best—closing deals."
+      }
+    ]
+  }
+}

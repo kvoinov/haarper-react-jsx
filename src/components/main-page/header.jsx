@@ -7,6 +7,7 @@ function Header({ onScheduleClick }) {
     { label: "Events", href: "/events" },
     { label: "About", href: "#about" },
     { label: "Why us", href: "#why-us" },
+    { label: "Case Studies", href: "/case-studies/remax" },
     { label: "Testimonials", href: "#clients" },
   ];
   // ALL other pages always solid

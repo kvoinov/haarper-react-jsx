@@ -9,7 +9,7 @@ const items = [
   },
   {
     name: "João Oliveira",
-    b_title: "Product Manager, REMAX",
+    b_title: "Product Manager, RE/MAX",
     par: "The AI integration Remax implemented has transformed our lead management process, reducing information retrieval from hours to mere seconds. Our agents can now access comprehensive lead data instantly, dramatically improving response times and conversion rates.",
     avatar: "assets/testimonial/joao.jpg",
   },

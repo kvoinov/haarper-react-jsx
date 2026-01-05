@@ -10,6 +10,7 @@ import PrivacyPolicy from "./components/main-page/privacy-policy";
 import ConsentRequired from "./components/main-page/consent-required";
 import Systems from "./components/main-page/systems";
 import ServicePage from "./components/pages/services";
+import CaseStudy from "./components/pages/case-study";
 import ReactGA from "react-ga4";
 
 function TrackPageView() {
@@ -47,6 +48,7 @@ function AppLayout() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/consent-required" element={<ConsentRequired />} />
         <Route path="/services/:slug" element={<ServicePage />} />
+        <Route path="/case-studies/:slug" element={<CaseStudy />} />
       </Routes>
 
       <Footer />
