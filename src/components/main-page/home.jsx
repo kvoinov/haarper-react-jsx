@@ -4,7 +4,7 @@ import Features from "./features";
 import Hero from "./hero";
 import Testimonials from "./testimonials";
 import Contact from "./contact";
-import About from "./about";
+
 import Services from "./services";
 import Seo from "./seo";
 import { orgSchema } from "../../../seoSchema";
@@ -55,7 +55,6 @@ function Home() {
         showContactForm={showContactForm}
         setShowContactForm={setShowContactForm}
       />
-      <About />
     </>
   );
 }

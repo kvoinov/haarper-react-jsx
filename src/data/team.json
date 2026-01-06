@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Kris",
+    "image": "/assets/team/kris.webp",
+    "content": [
+      {
+        "type": "p",
+        "value": "Founder and CEO of Haarper. With a passion for innovation and a deep understanding of AI technologies, Kris leads Haarper in delivering cutting-edge solutions that empower businesses to thrive in the digital age."
+      }
+    ]
+  },
+  {
+    "name": "Silvia",
+    "image": "/assets/team/silvia.webp",
+    "content": [
+      {
+        "type": "p",
+        "value": "Technical Lead at Haarper. Silvia oversees the development and implementation of AI-driven projects, ensuring that Haarper's solutions are both effective and aligned with client needs."
+      }
+    ]
+  },
+  {
+    "name": "Ebba",
+    "image": "/assets/team/ebba.webp",
+    "content": [
+      {
+        "type": "p",
+        "value": "Lead designer at Haarper. Ebba is responsible for crafting user-centric designs that enhance the usability and aesthetic appeal of Haarper's AI solutions."
+      }
+    ]
+  },
+  {
+    "name": "João",
+    "image": "/assets/team/joao.webp",
+    "content": [
+      {
+        "type": "p",
+        "value": "Developer at Haarper. João contributes to the coding and technical development of Haarper's AI applications, ensuring robust performance and reliability."
+      }
+    ]
+  }
+]

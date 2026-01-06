@@ -179,7 +179,8 @@ textarea.form-control {
   display: block;
 }
 .site-header.is-transparent {
-  background-color: rgba(255, 255, 255, 0);
+  /*background-color: rgba(255, 255, 255, 0);*/
+  background-color: transparent;
   box-shadow: none;
 }
 /* nav text white on transparent header */
@@ -192,6 +193,9 @@ textarea.form-control {
   background: transparent;
   color: #fff;
   border-color: #fff;
+}
+.site-header.is-transparent.menu-open {
+  background: #fff;
 }
 
 /* SCROLLED (solid) */
@@ -257,6 +261,92 @@ logo-img {
 }
 .nav-links a:hover {
   color: var(--primary);
+}
+
+/* hamburger hidden by default (desktop) */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.hamburger__bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 5px 0;
+  background: currentColor;
+}
+
+/* mobile menu panel (hidden by default) */
+.mobile-menu {
+  display: none;
+}
+
+/* --- Mobile breakpoint --- */
+@media (max-width: 900px) {
+  .nav-links--desktop,
+  .btn--desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 150ms ease;
+    padding: 16px;
+    background-color: inherit; /* matches header background */
+  }
+
+  .mobile-menu.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    background: white;
+  }
+
+  .mobile-menu__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+  }
+
+  .mobile-menu__links a {
+    display: block;
+    padding: 10px 6px;
+    text-decoration: none;
+  }
+  .mobile-menu__links:hover {
+    cursor: pointer;
+    background-color: var(--light-gray);
+  }
+
+  .mobile-menu__cta {
+    display: inline-block;
+    margin-top: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    position: relative; /* needed so menu can be absolute under header */
+  }
 }
 
 .btn {
@@ -834,8 +924,47 @@ footer {
     font-size: 2.5rem;
   }
 
+  .hero--bg {
+    min-height: 100vh;
+  }
+
+  .service-card-text {
+    top: 145px;
+  }
+  .logo img {
+    margin-left: -15px;
+  }
+
   .contact-container {
     flex-direction: column;
+  }
+
+  .service-row,
+  .case-row {
+    display: block;
+  }
+
+  .service-row__image,
+  .case-row__image {
+    width: 200px;
+    height: 200px;
+    border: #1d293a;
+    border-style: groove;
+    border-width: 5px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 70px;
+  }
+
+  .service-row__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    display: block;
+  }
+  .case-row__content-image {
+    display: none;
   }
 
   .features {
@@ -857,10 +986,22 @@ footer {
 }
 
 .about-div-main {
-  display: flex;
+  display: grid;
   gap: 3rem;
   align-items: center;
   flex-wrap: wrap;
+  background-color: #1e293b;
+  color: white;
+  padding: 20px 40px 40px 40px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
+  border-radius: 15p;
+}
+
+.about-div-main h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0 0 8px;
 }
 
 .about-div-p {
@@ -888,6 +1029,39 @@ footer {
   height: 100%;
   object-fit: cover; /* Ensures the image covers the area without distortion */
   border-radius: inherit; /* Keeps the border-radius consistent */
+}
+
+@media (max-width: 640px) {
+  .about-div-main {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px 40px 40px 40px;
+
+    margin-bottom: 40px;
+    border-radius: 15px;
+  }
+
+  .about-div-main h2 {
+    text-align: center;
+    margin: 25px 0 0px -85px;
+  }
+
+  .about-div-p {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-div-left {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .about-div-right {
+    display: none;
+  }
 }
 
 .thank-you-message {
@@ -1048,5 +1222,115 @@ footer {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* ===== Team page layout ===== */
+
+.team-page {
+  padding: 72px 0;
+  margin-top: 40px;
+}
+
+.team-row > h2 {
+  margin: 50px 0 30px 500px;
+  color: #3b82f6;
+}
+
+/* Grid: 3 columns desktop, 2 tablet, 1 mobile */
+.team-row__content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Card */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Image wrapper (top of card) */
+.team-row__content-image {
+  width: 100%;
+  height: 400px; /* adjust as you like */
+  overflow: hidden;
+}
+
+.team-row__content-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* keeps image nicely cropped */
+  filter: grayscale(100%) contrast(1.1) brightness(0.95);
+  transition: filter 250ms ease;
+}
+
+.team-member:hover .team-row__content-image img {
+  filter: none;
+}
+
+/* Text spacing inside card */
+.team-member > h3,
+.team-member > p,
+.team-member > h2,
+.team-member > ul {
+  padding: 0 18px;
+}
+
+.team-member > h3 {
+  margin: 16px 0 8px;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.team-member > p {
+  margin: 0 0 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* If you ever render headings/lists in content blocks */
+.team-member > h2 {
+  margin: 14px 0 8px;
+  font-size: 1.05rem;
+}
+
+.team-member > ul {
+  margin: 0 0 18px;
+  padding-left: 34px; /* keeps bullets aligned while still padding card */
+}
+
+.team-member > ul li {
+  margin: 6px 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .team-row__content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .team-row__content-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-page {
+    padding: 48px 0;
+  }
+  .team-row__content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .team-row__content-image {
+    height: 220px;
   }
 }
