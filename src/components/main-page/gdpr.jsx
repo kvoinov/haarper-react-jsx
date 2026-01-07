@@ -105,7 +105,7 @@ function GDPRConsent() {
         <p>
           This website uses cookies to ensure you get the best experience. By
           continuing, you agree to our use of cookies. Read our{" "}
-          <Link to={`/privacy-policy`}>Privacy Policy</Link>.
+          <Link to={`/privacy-policy`}> Privacy Policy</Link>.
         </p>
         <button onClick={acceptConsent} style={styles.button}>
           I Accept

@@ -9,7 +9,8 @@ const ConsentRequired = () => (
     </p>
     <p>
       Please review our
-      <Link to={`/privacy-policy`}>Privacy Policy</Link>. and accept to proceed.
+      <Link to={`/privacy-policy`}> Privacy Policy</Link>. and accept to
+      proceed.
     </p>
   </div>
 );

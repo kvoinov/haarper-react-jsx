@@ -19,8 +19,21 @@ function Header({ onScheduleClick }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const consent = document.cookie.match(/(^| )gdpr_consent=([^;]+)/)?.[2];
-    document.body.style.overflow = consent !== "accepted" ? "hidden" : "auto";
+    const applyScrollLock = () => {
+      const consent = document.cookie.match(/(^| )gdpr_consent=([^;]+)/)?.[2];
+      document.body.style.overflow = consent !== "accepted" ? "hidden" : "auto";
+    };
+
+    applyScrollLock();
+
+    // Optional: if your banner updates cookie, have it also dispatch:
+    // window.dispatchEvent(new Event("gdpr-consent-changed"));
+    window.addEventListener("gdpr-consent-changed", applyScrollLock);
+
+    return () => {
+      window.removeEventListener("gdpr-consent-changed", applyScrollLock);
+      document.body.style.overflow = "auto"; // cleanup safety
+    };
   }, []);
 
   useEffect(() => {
