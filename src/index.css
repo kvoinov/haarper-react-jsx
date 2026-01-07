@@ -872,11 +872,12 @@ footer {
   margin-left: 114px;
 }
 
-.social-link {
+.social-link,
+.social-link-about {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #c0c2c4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -887,6 +888,9 @@ footer {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.social-link-about:hover {
+  background-color: rgba(0, 87, 226, 0.75);
+}
 .footer-links h3 {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;

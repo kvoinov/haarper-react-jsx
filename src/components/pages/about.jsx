@@ -93,8 +93,7 @@ function About() {
                     <a
                       target="_blank"
                       href={member.linkedin}
-                      className="social-link"
-                      style={{ backgroundColor: "#c0c2c4" }}
+                      className="social-link social-link-about"
                     >
                       <img src="/assets/linked.svg" alt="LinkedIn" />
                     </a>
