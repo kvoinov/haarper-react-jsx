@@ -55,7 +55,7 @@ body {
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 3rem;
-  color: white;
+  color: #3c83f6da;
 }
 
 .contact-h2-title {
@@ -490,14 +490,6 @@ logo-img {
   padding: 9rem 0;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  color: #3c82f6;
-}
-
 .services {
   padding: 5rem 0;
 }
@@ -765,7 +757,12 @@ logo-img {
 .case-row__content h2,
 .case-row__content h3 {
   margin-top: 20px;
+  color: #3c83f6;
 }
+.case-row__content h2 {
+  color: #013890da;
+}
+
 .why-us {
   padding: 5rem 0;
   background-color: var(--light);
