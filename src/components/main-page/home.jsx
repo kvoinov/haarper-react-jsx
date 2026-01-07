@@ -49,12 +49,12 @@ function Home() {
       <Systems />
       <Features />
       <Clients />
-      <Testimonials />
-
       <Contact
         showContactForm={showContactForm}
         setShowContactForm={setShowContactForm}
       />
+
+      <Testimonials />
     </>
   );
 }

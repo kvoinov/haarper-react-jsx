@@ -11,6 +11,11 @@ function Clients() {
       link: "https://sapo.pt/",
     },
     {
+      name: "Millennium bcp",
+      src: "/assets/clients/millenium.avif",
+      link: "https://www.millenniumbcp.pt/",
+    },
+    {
       name: "Ikea",
       src: "/assets/clients/ikea.avif",
       link: "https://www.ikea.com/pt/pt/",
@@ -19,6 +24,17 @@ function Clients() {
       name: "Parnexus",
       src: "/assets/clients/parnexus.avif",
       link: "https://www.parnexus.com/",
+    },
+    {
+      name: "Vodafone",
+      src: "/assets/clients/vodafone.avif",
+      link: "https://www.vodafone.pt/",
+    },
+
+    {
+      name: "Sonae",
+      src: "/assets/clients/sonae.avif",
+      link: "https://www.sonae.pt/",
     },
     {
       name: "Gamescribes",

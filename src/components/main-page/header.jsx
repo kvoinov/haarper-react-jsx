@@ -5,10 +5,11 @@ function Header({ onScheduleClick }) {
   const nav_links = [
     { label: "Services", href: "#services" },
     { label: "Events", href: "/events" },
-    { label: "About", href: "/about" },
+    { label: "Our Clients", href: "#clients" },
+
     { label: "Why us", href: "#why-us" },
     { label: "Case Studies", href: "/case-studies/remax" },
-    { label: "Testimonials", href: "#clients" },
+    { label: "About", href: "/about" },
   ];
 
   const navigate = useNavigate();

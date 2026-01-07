@@ -1,3 +1,20 @@
+import { useEffect, useMemo, useState } from "react";
+
+function useIsMobile(breakpointPx = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${breakpointPx - 1}px)`);
+    const onChange = () => setIsMobile(mq.matches);
+
+    onChange();
+    mq.addEventListener?.("change", onChange);
+    return () => mq.removeEventListener?.("change", onChange);
+  }, [breakpointPx]);
+
+  return isMobile;
+}
+
 function Systems() {
   const systems = [
     { name: "rust", src: "/assets/systems/rust.avif" },
@@ -5,9 +22,8 @@ function Systems() {
     { name: "Sharetribe", src: "/assets/systems/sharetribe.avif" },
     { name: "HubSpot", src: "/assets/systems/hubspot.avif" },
     { name: "chatgpt", src: "/assets/systems/chatgpt.avif" },
-
     { name: "Squarespace", src: "/assets/systems/squarespace.avif" },
-    { name: "c", src: "/assets/systems/c.avif" },
+    { name: "googlecloud", src: "/assets/systems/googlecloud.avif" },
     { name: "aws", src: "/assets/systems/aws.avif" },
     { name: "make", src: "/assets/systems/make.avif" },
     { name: "Salesforce", src: "/assets/systems/salesforce.avif" },
@@ -27,13 +43,29 @@ function Systems() {
     { name: "whatsapp", src: "/assets/systems/whatsapp.avif" },
   ];
 
+  const isMobile = useIsMobile(768);
+  const [expanded, setExpanded] = useState(false);
+
+  // If user rotates / resizes to desktop, show all automatically.
+  useEffect(() => {
+    if (!isMobile) setExpanded(true);
+    if (isMobile) setExpanded(false);
+  }, [isMobile]);
+
+  const visibleSystems = useMemo(() => {
+    if (!isMobile) return systems;
+    return expanded ? systems : systems.slice(0, 2);
+  }, [isMobile, expanded, systems]);
+
+  const canToggle = isMobile && systems.length > 2;
+
   return (
     <section className="systems" aria-label="Platforms we specialize in">
       <div className="full-container">
         <h2 className="systems__title">We are specialists in</h2>
 
         <div className="systems__grid">
-          {systems.map((s) => (
+          {visibleSystems.map((s) => (
             <div className="systems__item" key={s.name} title={s.name}>
               <img
                 src={s.src}
@@ -43,6 +75,17 @@ function Systems() {
               />
             </div>
           ))}
+
+          {canToggle && (
+            <button
+              type="button"
+              className="systems__toggle"
+              onClick={() => setExpanded((v) => !v)}
+              aria-expanded={expanded}
+            >
+              {expanded ? "Show less" : `Show more`}
+            </button>
+          )}
         </div>
       </div>
     </section>
