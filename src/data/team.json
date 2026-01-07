@@ -2,6 +2,7 @@
   {
     "name": "Kris",
     "image": "/assets/team/kris.webp",
+    "linkedin": "www.linkedin.com/in/kristijan-voinov-ab53b82/",
     "content": [
       {
         "type": "p",
@@ -12,6 +13,7 @@
   {
     "name": "Silvia",
     "image": "/assets/team/silvia.webp",
+    "linkedin": "www.linkedin.com/in/silvia-mueller-64b5643a3",
     "content": [
       {
         "type": "p",
@@ -22,20 +24,22 @@
   {
     "name": "Ebba",
     "image": "/assets/team/ebba.webp",
+    "linkedin": "www.linkedin.com/in/ebba-pettersson-91a4893a3",
     "content": [
       {
         "type": "p",
-        "value": "Lead designer at Haarper. Ebba is responsible for crafting user-centric designs that enhance the usability and aesthetic appeal of Haarper's AI solutions."
+        "value": "Lead Designer at Haarper. Ebba is responsible for crafting user-centric designs that enhance the usability and aesthetic appeal of Haarper's AI solutions."
       }
     ]
   },
   {
     "name": "João",
     "image": "/assets/team/joao.webp",
+    "linkedin": "www.linkedin.com/in/joão-nunes-6797b73a3",
     "content": [
       {
         "type": "p",
-        "value": "Developer at Haarper. João contributes to the coding and technical development of Haarper's AI applications, ensuring robust performance and reliability."
+        "value": "Senior Developer at Haarper. João contributes to the coding and technical development of Haarper's AI applications, ensuring robust performance and reliability."
       }
     ]
   }

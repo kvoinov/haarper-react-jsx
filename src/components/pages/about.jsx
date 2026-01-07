@@ -83,6 +83,22 @@ function About() {
                     }
                     return null;
                   })}
+                  <div
+                    style={{
+                      marginTop: "auto",
+                      marginLeft: "10px",
+                      paddingBottom: "10px",
+                    }}
+                  >
+                    <a
+                      target="_blank"
+                      href={member.linkedin}
+                      className="social-link"
+                      style={{ backgroundColor: "#c0c2c4" }}
+                    >
+                      <img src="/assets/linked.svg" alt="LinkedIn" />
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
