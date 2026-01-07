@@ -1167,6 +1167,12 @@ footer {
   margin-bottom: 5px;
 }
 
+@media (max-width: 640px) {
+  .policy {
+    padding: 6rem 2rem 0rem 2rem;
+  }
+}
+
 .systems {
   padding: 1rem 0;
   background: #1e293b; /* dark so white logos pop */

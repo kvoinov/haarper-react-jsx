@@ -57,7 +57,6 @@ function Footer() {
                 <a href="#testimonials">Testimonials</a>
               </li>
               <li>
-                {" "}
                 <Link to={`/privacy-policy`}>Privacy Policy</Link>
               </li>
               <li></li>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ConsentRequired = () => (
   <div style={{ padding: "2rem", textAlign: "center" }}>
     <h1>Consent Required</h1>
@@ -7,17 +9,7 @@ const ConsentRequired = () => (
     </p>
     <p>
       Please review our
-      <a
-        href="/privacy-policy"
-        style={{
-          color: "#007BFF",
-          textDecoration: "underline",
-          marginLeft: "4px",
-        }}
-      >
-        Privacy Policy
-      </a>
-      and accept to proceed.
+      <Link to={`/privacy-policy`}>Privacy Policy</Link>. and accept to proceed.
     </p>
   </div>
 );
