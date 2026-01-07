@@ -2,11 +2,12 @@ function Hero({ onScheduleClick }) {
   return (
     <section className="hero hero--bg">
       <div className="container hero__content">
-        <h1>Expert IT Solutions for Your Business</h1>
+        <h1>AI-Powered Software & App Development</h1>
         <p>
-          Haarper provides comprehensive IT consulting, support, knowledge
-          management, technical writing, and development services to help your
-          business succeed in the digital landscape.
+          Haarper specializes in AI-driven software and application development,
+          delivering intelligent solutions tailored to your business needs. From
+          concept to deployment, we build scalable apps, automate workflows, and
+          create innovative digital products that give you a competitive edge.
         </p>
         <div className="hero-btns">
           <a
