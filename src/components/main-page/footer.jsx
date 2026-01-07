@@ -23,7 +23,7 @@ function Footer() {
                 href="https://www.linkedin.com/company/haarper/"
                 className="social-link"
               >
-                <img src="/assets/linked.svg" alt="LinkedIn" />
+                <img src="/assets/icons/linked.svg" alt="LinkedIn" />
               </a>
             </div>
           </div>

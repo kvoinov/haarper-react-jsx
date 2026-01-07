@@ -2,44 +2,53 @@ function Clients() {
   const clients = [
     {
       name: "Nestlé",
-      src: "/assets/clients/nestle.png",
+      src: "/assets/clients/nestle.avif",
       link: "https://www.nestle.com/",
     },
-    { name: "Sapo", src: "/assets/clients/sapo.png", link: "https://sapo.pt/" },
+    {
+      name: "Sapo",
+      src: "/assets/clients/sapo.avif",
+      link: "https://sapo.pt/",
+    },
     {
       name: "Ikea",
-      src: "/assets/clients/ikea.png",
+      src: "/assets/clients/ikea.avif",
       link: "https://www.ikea.com/pt/pt/",
     },
     {
       name: "Parnexus",
-      src: "/assets/clients/parnexus.png",
+      src: "/assets/clients/parnexus.avif",
       link: "https://www.parnexus.com/",
     },
     {
       name: "Gamescribes",
-      src: "/assets/clients/gamescribes.png",
+      src: "/assets/clients/gamescribes.avif",
       link: "https://www.gamescribes.com/",
     },
     {
       name: "Unilever",
-      src: "/assets/clients/unilever.png",
+      src: "/assets/clients/unilever.avif",
       link: "https://www.unilever.com/",
     },
     {
       name: "Remax",
-      src: "/assets/clients/remax.png",
+      src: "/assets/clients/remax.avif",
       link: "https://remax.pt/",
     },
     {
       name: "Sea Sage",
-      src: "/assets/clients/seasage.png",
+      src: "/assets/clients/seasage.avif",
       link: "https://www.sea-sage.com/",
     },
     {
       name: "Fujitsu",
-      src: "/assets/clients/fujitsu.png",
+      src: "/assets/clients/fujitsu.avif",
       link: "https://global.fujitsu/en-global",
+    },
+    {
+      name: "Federaçao Portuguesa de Futebol",
+      src: "/assets/clients/fpf.avif",
+      link: "https://www.fpf.pt/",
     },
   ];
 

@@ -50,7 +50,7 @@ function About() {
               </p>
             </div>
             <div class="about-div-right">
-              <img alt="Office" src="/assets/office.jpg" />
+              <img alt="Office" src="/assets/images/office.jpg" />
             </div>
           </div>
 
@@ -95,7 +95,7 @@ function About() {
                       href={member.linkedin}
                       className="social-link social-link-about"
                     >
-                      <img src="/assets/linked.svg" alt="LinkedIn" />
+                      <img src="/assets/icons/linked.svg" alt="LinkedIn" />
                     </a>
                   </div>
                 </div>

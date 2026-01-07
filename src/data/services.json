@@ -1,7 +1,7 @@
 {
   "ai-automation": {
     "title": "AI & Workflow Automation - Intelligent Automation: Transforming Business Operations",
-    "image": "/assets/service-cards/ai-back.png",
+    "image": "/assets/service-cards/ai-back.",
     "content": [
       {
         "type": "p",
@@ -60,7 +60,7 @@
   },
   "software-development": {
     "title": "Software Development - Strategic Technology Planning: Transforming Business Operations",
-    "image": "/assets/service-cards/dev.png",
+    "image": "/assets/service-cards/dev.avif",
     "content": [
       {
         "type": "p",
@@ -119,7 +119,7 @@
   },
   "web-development": {
     "title": "Web Development - Building Your Digital Foundation",
-    "image": "/assets/service-cards/network.png",
+    "image": "/assets/service-cards/network.avif",
     "content": [
       {
         "type": "p",
@@ -178,7 +178,7 @@
   },
   "it-support": {
     "title": "IT Support Services - Reliable Technical Excellence",
-    "image": "/assets/service-cards/support.png",
+    "image": "/assets/service-cards/support.avif",
     "content": [
       {
         "type": "p",
@@ -237,7 +237,7 @@
   },
   "knowledge-management": {
     "title": "Knowledge Management - Unlocking Organizational Intelligence",
-    "image": "/assets/service-cards/know.png",
+    "image": "/assets/service-cards/know.avif",
     "content": [
       {
         "type": "p",
@@ -296,7 +296,7 @@
   },
   "it-consulting": {
     "title": "IT Consulting - Strategic Technology Planning",
-    "image": "/assets/service-cards/tech.png",
+    "image": "/assets/service-cards/tech.avif",
     "content": [
       {
         "type": "p",

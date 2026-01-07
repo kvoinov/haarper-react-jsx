@@ -188,6 +188,10 @@ textarea.form-control {
   color: #fff;
 }
 
+.site-header.is-transparent .nav-links a:hover {
+  color: var(--primary);
+}
+
 /* optional: logo + button spacing stays same */
 .site-header.is-transparent .btn.btn-secondary {
   background: transparent;
@@ -259,10 +263,57 @@ logo-img {
   list-style: none;
   padding-left: 0;
 }
-.nav-links a:hover {
+.site-header.is-solid .nav-links a:hover {
   color: var(--primary);
 }
 
+/*rainbox static*/
+/*
+.site-header.is-solid .nav-links a:hover {
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #8b00ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}*/
+/*rainbox moving*/
+/*
+.site-header.is-solid .nav-links a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.8),
+    rgba(255, 127, 0, 0.8),
+    rgba(255, 255, 0, 10.8),
+    rgba(0, 255, 0, 0.8),
+    rgba(0, 0, 255, 0.8),
+    rgba(75, 0, 130, 0.8),
+    rgba(139, 0, 255, 0.8),
+    rgba(255, 0, 0, 0.8)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbowShift 1.2s linear infinite;
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+*/
 /* hamburger hidden by default (desktop) */
 .hamburger {
   display: none;
@@ -451,27 +502,27 @@ logo-img {
   padding: 5rem 0;
 }
 .service-card.service--bg--ai {
-  background-image: url("/assets/service-cards/ai-back.png");
+  background-image: url("/assets/service-cards/ai-back.avif");
 }
 
 .service-card.service--bg--dev {
-  background-image: url("/assets/service-cards/dev.png");
+  background-image: url("/assets/service-cards/dev.avif");
 }
 
 .service-card.service--bg--know {
-  background-image: url("/assets/service-cards/know.png");
+  background-image: url("/assets/service-cards/know.avif");
 }
 
 .service-card.service--bg--network {
-  background-image: url("/assets/service-cards/network.png");
+  background-image: url("/assets/service-cards/network.avif");
 }
 
 .service-card.service--bg--support {
-  background-image: url("/assets/service-cards/support.png");
+  background-image: url("/assets/service-cards/support.avif");
 }
 
 .service-card.service--bg--tech {
-  background-image: url("/assets/service-cards/tech.png");
+  background-image: url("/assets/service-cards/tech.avif");
 }
 
 .service-card.service--bg {
@@ -877,11 +928,15 @@ footer {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: #c0c2c4;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s;
+}
+
+.social-link-about {
+  background-color: #c0c2c4;
 }
 
 .social-link:hover {
@@ -1044,7 +1099,7 @@ footer {
     background-color: #1e293b;
     color: white;
     padding: 20px 40px 40px 40px;
-
+    margin-top: 30px;
     margin-bottom: 40px;
     border-radius: 15px;
   }

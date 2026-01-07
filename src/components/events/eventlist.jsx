@@ -11,6 +11,10 @@ function EventList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
     const loadEvents = async () => {
       try {
         const data = await eventAPI.fetchAll();
