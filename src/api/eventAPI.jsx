@@ -25,8 +25,6 @@ const eventAPI = {
       `${window.API_URL}/events/get.php?slug=${slug}`
     );
 
-    console.log(slug);
-
     const event = response.data[0];
 
     const transformedEvent = {

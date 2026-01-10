@@ -50,7 +50,7 @@ function About() {
               </p>
             </div>
             <div class="about-div-right">
-              <img alt="Office" src="/assets/images/office.jpg" />
+              <img alt="Office" src="/assets/images/office.avif" />
             </div>
           </div>
 

@@ -459,7 +459,7 @@ logo-img {
   min-height: 80vh;
 
   /* the background image */
-  background-image: url("/event_img/ai_webinar.jpg");
+  background-image: url("/event_img/ai_webinar.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -867,7 +867,7 @@ logo-img {
 }
 
 .cta {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background: linear-gradient(to right, #1e293b, #2563eb);
   color: white;
   text-align: center;
@@ -1146,6 +1146,7 @@ footer {
 
 .policy {
   color: var(--gray);
+  padding: 7rem;
 }
 
 .policy h1 {
@@ -1167,7 +1168,7 @@ footer {
   margin-bottom: 5px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 440px) {
   .policy {
     padding: 6rem 3rem 0rem 3rem;
   }
@@ -1247,7 +1248,7 @@ footer {
 
 .clients {
   padding: 1rem 0;
-  background: #1e293b; /* dark so white logos pop */
+  background: linear-gradient(to right, #1e293b, #2563eb);
 }
 
 .clients-marquee {

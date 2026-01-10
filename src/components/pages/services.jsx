@@ -13,8 +13,6 @@ function ServicePage() {
   const service = services[slug];
   const firstParagraph =
     service.content?.find((b) => b.type === "p")?.value || "";
-  const metaDescription =
-    service.seoDescription || firstParagraph.slice(0, 160);
 
   const canonicalUrl = `https://haarper.pt/services/${slug}`;
   const ogImage = service.ogImage
@@ -25,7 +23,7 @@ function ServicePage() {
     <>
       <Seo
         title={`${service.title} | Haarper`}
-        description={metaDescription}
+        description={service.description}
         url={canonicalUrl}
         image={ogImage}
         type="article"

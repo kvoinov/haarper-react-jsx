@@ -5,7 +5,7 @@ const Seo = ({
   title,
   description,
   url = "https://haarper.pt/",
-  image = "https://haarper.pt/logo_white.svg",
+  image = "https://haarper.pt/favicon.ico",
   structuredData,
   type = "website",
 }) => {

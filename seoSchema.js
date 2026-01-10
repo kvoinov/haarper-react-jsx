@@ -5,7 +5,7 @@ export const orgSchema = {
   "@type": "Organization",
   name: "Haarper",
   url: "https://haarper.pt/",
-  logo: "https://haarper.pt/logo_white.svg",
+  logo: "https://haarper.pt/favicon.ico",
 
   contactPoint: [
     {

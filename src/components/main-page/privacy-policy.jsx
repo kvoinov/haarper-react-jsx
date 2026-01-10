@@ -1,13 +1,73 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
+
+const COOKIE_NAME = "gdpr_consent";
+
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
+  return match ? match[2] : null;
+}
+
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days * 86400000).toUTCString();
+  document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+}
 
 function PrivacyPolicy() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
+  const [consent, setConsent] = useState(() => getCookie(COOKIE_NAME));
+
+  useEffect(() => {
+    const onChange = () => setConsent(getCookie(COOKIE_NAME));
+    window.addEventListener("gdpr-consent-changed", onChange);
+    return () => window.removeEventListener("gdpr-consent-changed", onChange);
+  }, []);
+
+  const showAccept = useMemo(() => consent !== "accepted", [consent]);
+
+  const acceptHere = () => {
+    setCookie(COOKIE_NAME, "accepted", 365);
+    setConsent("accepted");
+    window.dispatchEvent(new Event("gdpr-consent-changed"));
+    document.body.style.overflow = "auto"; // in case the popup locked it
+  };
+
   return (
-    <div className="policy" id="policy" style={{ padding: "7rem" }}>
+    <div className="policy" id="policy">
       <h1>Privacy Policy</h1>
+      {showAccept && (
+        <div
+          style={{
+            margin: "1.25rem 0",
+            padding: "1rem",
+            border: "1px solid #ddd",
+            borderRadius: "8px",
+          }}
+        >
+          <p style={{ margin: 0 }}>
+            You haven’t accepted cookies yet. This website uses cookies to
+            ensure you get the best experience. By continuing, you agree to our
+            use of cookies.
+          </p>
+          <button
+            onClick={acceptHere}
+            style={{
+              marginTop: "0.75rem",
+              padding: "0.6rem 1rem",
+              border: "none",
+              borderRadius: "6px",
+              backgroundColor: "#007BFF",
+              color: "#fff",
+              cursor: "pointer",
+              fontSize: "1rem",
+            }}
+          >
+            Accept cookies
+          </button>
+        </div>
+      )}
       <p>
         We value your privacy. This Privacy Policy explains how we collect, use,
         and protect your personal information when you use our website.

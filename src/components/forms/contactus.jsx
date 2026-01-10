@@ -52,8 +52,6 @@ function ContactUs() {
   return (
     <section className="contact-section" id="contact">
       <div className="container">
-        {!formSubmitted && <h2 className="contact-h2-title ">Contact Us</h2>}
-
         <div className="contact-container">
           {!formSubmitted ? (
             <div className="contact-form">

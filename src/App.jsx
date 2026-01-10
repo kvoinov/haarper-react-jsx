@@ -13,6 +13,7 @@ import CaseStudy from "./components/pages/case-study";
 import ReactGA from "react-ga4";
 import NotFound from "./components/pages/not-found";
 import About from "./components/pages/about";
+import RequireConsent from "./components/main-page/RequireConsent";
 
 function TrackPageView() {
   const location = useLocation();
@@ -41,17 +42,21 @@ function AppLayout() {
             : undefined
         }
       />
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<EventList />} />
-        <Route path="/events/:slug" element={<EventDetail />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/about" element={<About />} />
         <Route path="/consent-required" element={<ConsentRequired />} />
-        <Route path="/services/:slug" element={<ServicePage />} />
-        <Route path="/case-studies/:slug" element={<CaseStudy />} />
-        <Route path="*" element={<NotFound />} />
+
+        <Route element={<RequireConsent />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<EventList />} />
+          <Route path="/events/:slug" element={<EventDetail />} />
+
+          <Route path="/about" element={<About />} />
+
+          <Route path="/services/:slug" element={<ServicePage />} />
+          <Route path="/case-studies/:slug" element={<CaseStudy />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
 
       <Footer />

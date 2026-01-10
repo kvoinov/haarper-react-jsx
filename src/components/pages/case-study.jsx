@@ -24,7 +24,7 @@ function CaseStudy() {
   const firstParagraph =
     study.content?.find((b) => b.type === "p")?.value || "";
 
-  const metaDescription = study.seoDescription || firstParagraph.slice(0, 160);
+  const metaDescription = firstParagraph.slice(0, 160);
 
   const canonicalUrl = `https://haarper.pt/case-studies/${slug}`;
 

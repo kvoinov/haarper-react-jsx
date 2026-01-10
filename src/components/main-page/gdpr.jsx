@@ -69,6 +69,8 @@ function GDPRConsent() {
 
   const acceptConsent = () => {
     setCookie(COOKIE_NAME, "accepted", 365);
+    window.dispatchEvent(new Event("gdpr-consent-changed"));
+
     closePopup();
   };
 
@@ -79,6 +81,7 @@ function GDPRConsent() {
 
   const noConsent = () => {
     setCookie(COOKIE_NAME, "refused", 365);
+    window.dispatchEvent(new Event("gdpr-consent-changed"));
     navigate("/consent-required");
     closePopup();
   };
