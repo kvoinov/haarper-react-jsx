@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import eventAPI from "../../api/eventAPI";
 import { useParams } from "react-router-dom";
 import Seo from "../main-page/seo";
@@ -23,7 +22,9 @@ function EventDetail() {
 
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   useEffect(() => {
     const loadEvent = async () => {
       if (!slug) return;
@@ -98,40 +99,6 @@ function EventDetail() {
 
   return (
     <>
-      <Helmet>
-        <title>{eventData?.title || "Event Detail"}</title>
-
-        {eventData && (
-          <>
-            <meta property="og:title" content={eventData.title} />
-            <meta
-              property="og:description"
-              content={eventData.description.slice(0, 150)}
-            />
-            <meta
-              property="og:image"
-              content={`https://haarper.pt/event_img/${eventData.img}`}
-            />
-            <meta
-              property="og:url"
-              content={`https://haarper.pt/events/${slug}`}
-            />
-            <meta property="og:type" content="article" />
-
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content={eventData.title} />
-            <meta
-              name="twitter:description"
-              content={eventData.description.slice(0, 150)}
-            />
-            <meta
-              name="twitter:image"
-              content={`https://haarper.pt/event_img/${eventData.img}`}
-            />
-          </>
-        )}
-      </Helmet>
-
       <Seo
         title={"" + (eventData?.title ?? "")}
         description={"" + (eventData?.short_desc ?? "")}
@@ -146,7 +113,7 @@ function EventDetail() {
             <div className="details-left-side">
               <div className="events-image">
                 <img
-                  src={"/event_img/" + (eventData?.img ?? "")}
+                  src={"/assets/event_img/" + (eventData?.img ?? "")}
                   alt={eventData?.title || "Event"}
                 />
               </div>

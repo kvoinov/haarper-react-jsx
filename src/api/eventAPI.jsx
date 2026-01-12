@@ -3,7 +3,7 @@ import { format, parseISO } from "date-fns";
 
 const eventAPI = {
   fetchAll: async () => {
-    const response = await Axios.get(`${window.API_URL}/events/get.php`);
+    const response = await Axios.get(`https://haarper.pt/api/events/get.php`);
 
     const transformedData = response.data.map((event) => ({
       id: event.e_id,
@@ -22,7 +22,7 @@ const eventAPI = {
 
   fetchOne: async (slug) => {
     const response = await Axios.get(
-      `${window.API_URL}/events/get.php?slug=${slug}`
+      `https://haarper.pt/api/events/get.php?slug=${slug}`
     );
 
     const event = response.data[0];

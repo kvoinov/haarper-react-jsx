@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { canon } from "../../helpers/dumb/canonisation";
 const links = [
   { slug: "ai-automation", title: "AI & Workflow Automation" },
   { slug: "it-consulting", title: "IT Consulting" },
@@ -13,7 +14,7 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-info">
-            <a href="#" className="logo">
+            <a href="/" className="logo">
               <img src="/logo_noback.png" alt="logo" />
             </a>
 
@@ -34,7 +35,7 @@ function Footer() {
               {links.map((s) => (
                 <li>
                   <Link
-                    to={`/services/${s.slug}`}
+                    to={canon(`/services/${s.slug}`)}
                     className="service-card-link"
                   >
                     <div>{s.title}</div>
@@ -57,7 +58,7 @@ function Footer() {
                 <a href="#testimonials">Testimonials</a>
               </li>
               <li>
-                <Link to={`/privacy-policy`}>Privacy Policy</Link>
+                <Link to={canon(`/privacy-policy`)}>Privacy Policy</Link>
               </li>
               <li></li>
             </ul>

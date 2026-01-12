@@ -2,7 +2,8 @@
   "ai-automation": {
     "title": "AI & Workflow Automation - Intelligent Automation: Transforming Business Operations",
     "image": "/assets/service-cards/ai-back.avif",
-    "description": "Intelligent automation solutions leveraging AI to streamline your business processes",
+    "ogImage": "/assets/service-cards/og-images/ai-back.png",
+    "description": "Intelligent automation solutions leveraging AI to streamline business processes, workflows, and operations for maximum efficiency and productivity",
     "content": [
       {
         "type": "p",
@@ -62,7 +63,8 @@
   "software-development": {
     "title": "Software Development - Strategic Technology Planning: Transforming Business Operations",
     "image": "/assets/service-cards/dev.avif",
-    "description": "Custom software solutions tailored to your specific business needs and requirements.",
+    "ogImage": "/assets/service-cards/og-images/dev.png",
+    "description": "Custom software solutions precisely tailored to your specific business needs, operational requirements, and strategic goals for competitive advantage",
     "content": [
       {
         "type": "p",
@@ -122,7 +124,8 @@
   "web-development": {
     "title": "Web Development - Building Your Digital Foundation",
     "image": "/assets/service-cards/network.avif",
-    "description": "Responsive, user-friendly websites and web applications.",
+    "ogImage": "/assets/service-cards/og-images/network.png",
+    "description": "Responsive, user-friendly websites and web applications expertly designed to engage users, enhance experiences, and drive measurable business results",
     "content": [
       {
         "type": "p",
@@ -182,7 +185,8 @@
   "it-support": {
     "title": "IT Support Services - Reliable Technical Excellence",
     "image": "/assets/service-cards/support.avif",
-    "description": "Reliable technical assistance for all your technology needs.",
+    "ogImage": "/assets/service-cards/og-images/support.png",
+    "description": "Reliable technical assistance and expert support for all your technology needs with rapid problem resolution and proactive system maintenance services",
     "content": [
       {
         "type": "p",
@@ -242,7 +246,8 @@
   "knowledge-management": {
     "title": "Knowledge Management - Unlocking Organizational Intelligence",
     "image": "/assets/service-cards/know.avif",
-    "description": "Effective systems and practices to capture, organize, and leverage your knowledge.",
+    "ogImage": "/assets/service-cards/og-images/know.png",
+    "description": "Effective systems and practices to capture, organize, share, and leverage your organizational knowledge for improved efficiency and innovation growth",
     "content": [
       {
         "type": "p",
@@ -302,7 +307,8 @@
   "it-consulting": {
     "title": "IT Consulting - Strategic Technology Planning",
     "image": "/assets/service-cards/tech.avif",
-    "description": "Strategic technology planning and guidance to optimize your IT infrastructure.",
+    "ogImage": "/assets/service-cards/og-images/tech.png",
+    "description": "Strategic technology planning and expert guidance to align IT infrastructure with business objectives for optimal performance and competitive advantage",
     "content": [
       {
         "type": "p",

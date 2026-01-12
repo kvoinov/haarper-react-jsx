@@ -10,19 +10,19 @@ function About() {
     team?.[0]?.content?.find((b) => b.type === "p")?.value || "";
 
   const metaDescription = firstParagraph.slice(0, 160);
-  const canonicalUrl = `https://haarper.pt/about`;
+  const canonicalUrl = `https://haarper.pt/about/`;
 
   // Optional: pick an OG image from first person (or set a fixed one)
-  const ogImage = `https://haarper.pt${team?.[0]?.image || ""}`;
+  const ogImage = `https://haarper.pt${team?.[0]?.image}`;
 
   return (
     <>
       <Seo
         title="Meet our team | Haarper"
-        description={metaDescription}
+        //description={metaDescription}
         url={canonicalUrl}
-        image={ogImage}
-        type="about"
+        //image={ogImage}
+        type="website"
       />
 
       <section className="team-page" id="team-page">

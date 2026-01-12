@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { canon } from "../../helpers/dumb/canonisation";
 function EventCard(props) {
   return (
     <div className="service-card event-card">
@@ -22,7 +22,7 @@ function EventCard(props) {
         {props.duration}
       </h5>
 
-      <Link to={"/events/" + props.slug}>
+      <Link to={canon("/events/" + props.slug)}>
         <button className="btn">{props.btn}</button>
       </Link>
     </div>

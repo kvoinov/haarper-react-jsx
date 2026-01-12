@@ -26,17 +26,14 @@ function CaseStudy() {
 
   const metaDescription = firstParagraph.slice(0, 160);
 
-  const canonicalUrl = `https://haarper.pt/case-studies/${slug}`;
-
-  const ogImage = study.ogImage
-    ? study.ogImage
-    : `https://haarper.pt${study.imageClient || study.imageStudy || ""}`;
+  const canonicalUrl = `https://haarper.pt/case-studies/${slug}/`;
+  const ogImage = `https://haarper.pt${study.ogImage}`;
 
   return (
     <>
       <Seo
         title={`${study.title} | Haarper`}
-        description={metaDescription}
+        description={study.description}
         url={canonicalUrl}
         image={ogImage}
         type="article"

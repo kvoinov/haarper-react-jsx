@@ -587,7 +587,7 @@ logo-img {
 
 .event-container {
   display: flex;
-
+  margin-top: 45px;
   justify-content: space-between;
   align-items: flex-start;
   gap: 32px; /* Space between left and right sides */

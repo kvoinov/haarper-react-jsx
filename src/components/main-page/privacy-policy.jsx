@@ -3,10 +3,10 @@ import { useEffect, useMemo, useState } from "react";
 const COOKIE_NAME = "gdpr_consent";
 
 function getCookie(name) {
+  if (typeof document === "undefined") return null; // ✅ SSR/prerender safe
   const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
   return match ? match[2] : null;
 }
-
 function setCookie(name, value, days) {
   const expires = new Date(Date.now() + days * 86400000).toUTCString();
   document.cookie = `${name}=${value}; expires=${expires}; path=/`;

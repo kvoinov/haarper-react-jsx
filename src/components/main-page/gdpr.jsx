@@ -1,94 +1,81 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const COOKIE_NAME = "gdpr_consent";
 
 const styles = {
   overlay: {
     position: "fixed",
-    top: 0,
     left: 0,
-    width: "100vw",
-    height: "100vh",
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    right: 0,
+    bottom: 0,
+    zIndex: 9999,
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
-    zIndex: 9999,
+    padding: "1rem",
+    pointerEvents: "none", // lets the rest of the site remain clickable
   },
   popup: {
-    position: "relative",
+    pointerEvents: "auto", // but the banner itself is clickable
     backgroundColor: "#fff",
-    padding: "2rem",
+    padding: "1rem 1.25rem",
     borderRadius: "8px",
-    textAlign: "center",
-    maxWidth: "400px",
+    maxWidth: "720px",
+    width: "100%",
     boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-  },
-  closeButton: {
-    position: "absolute",
-    top: "10px",
-    right: "15px",
-    background: "none",
-    border: "none",
-    fontSize: "1.5rem",
-    cursor: "pointer",
-    color: "#555",
+    display: "flex",
+    gap: "1rem",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
   },
   button: {
-    marginTop: "1rem",
-    padding: "0.5rem 1rem",
+    padding: "0.5rem 0.9rem",
     border: "none",
-    borderRadius: "4px",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontSize: "0.95rem",
+  },
+  accept: {
     backgroundColor: "#007BFF",
     color: "#fff",
-    cursor: "pointer",
-    fontSize: "1rem",
   },
-  link: {
-    color: "#007BFF",
-    textDecoration: "underline",
-    cursor: "pointer",
-    marginLeft: "4px",
+  refuse: {
+    backgroundColor: "#e9ecef",
+    color: "#111",
+  },
+  text: {
+    flex: "1 1 320px",
+    margin: 0,
   },
 };
 
 function GDPRConsent() {
   const [isVisible, setIsVisible] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const consent = getCookie(COOKIE_NAME);
-    if (consent !== "accepted") {
+    if (consent !== "accepted" && consent !== "refused") {
       setIsVisible(true);
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
     }
   }, []);
 
   const acceptConsent = () => {
     setCookie(COOKIE_NAME, "accepted", 365);
     window.dispatchEvent(new Event("gdpr-consent-changed"));
-
-    closePopup();
-  };
-
-  const closePopup = () => {
     setIsVisible(false);
-    document.body.style.overflow = "auto";
   };
 
-  const noConsent = () => {
+  const refuseConsent = () => {
     setCookie(COOKIE_NAME, "refused", 365);
     window.dispatchEvent(new Event("gdpr-consent-changed"));
-    navigate("/consent-required");
-    closePopup();
+    setIsVisible(false);
   };
 
   const setCookie = (name, value, days) => {
     const expires = new Date(Date.now() + days * 86400000).toUTCString();
-    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+    // SameSite helps; Secure is good when you're on HTTPS
+    document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Lax; Secure`;
   };
 
   const getCookie = (name) => {
@@ -101,18 +88,26 @@ function GDPRConsent() {
   return (
     <div style={styles.overlay}>
       <div style={styles.popup}>
-        <button onClick={noConsent} style={styles.closeButton}>
-          ×
-        </button>
-        <h2>We Value Your Privacy</h2>
-        <p>
-          This website uses cookies to ensure you get the best experience. By
-          continuing, you agree to our use of cookies. Read our{" "}
-          <Link to={`/privacy-policy`}> Privacy Policy</Link>.
+        <p style={styles.text}>
+          We use cookies to improve your experience. You can accept or refuse
+          non-essential cookies. Read our{" "}
+          <Link to="/privacy-policy">Privacy Policy</Link>.
         </p>
-        <button onClick={acceptConsent} style={styles.button}>
-          I Accept
-        </button>
+
+        <div style={{ display: "flex", gap: "0.5rem" }}>
+          <button
+            onClick={refuseConsent}
+            style={{ ...styles.button, ...styles.refuse }}
+          >
+            Refuse
+          </button>
+          <button
+            onClick={acceptConsent}
+            style={{ ...styles.button, ...styles.accept }}
+          >
+            Accept
+          </button>
+        </div>
       </div>
     </div>
   );

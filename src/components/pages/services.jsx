@@ -14,10 +14,11 @@ function ServicePage() {
   const firstParagraph =
     service.content?.find((b) => b.type === "p")?.value || "";
 
-  const canonicalUrl = `https://haarper.pt/services/${slug}`;
-  const ogImage = service.ogImage
-    ? service.ogImage
-    : `https://haarper.pt${service.image}`; // if service.image is "/assets/..."
+  const canonicalUrl = `https://haarper.pt/services/${slug}/`;
+  //const ogImage = service.ogImage
+  // ? service.ogImage
+  // : `https://haarper.pt${service.image}`; // if service.image is "/assets/..."
+  const ogImage = `https://haarper.pt${service.ogImage}`;
 
   return (
     <>
@@ -27,6 +28,9 @@ function ServicePage() {
         url={canonicalUrl}
         image={ogImage}
         type="article"
+        //authorUrl="https://www.haarper.pt" // only if your Seo component supports it
+        // publishedTime="20016-01-08T00:00:00Z" // only if your Seo component supports it
+
         // structuredData={orgSchema} // optional
       />
 

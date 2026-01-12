@@ -1,15 +1,16 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { canon } from "../../helpers/dumb/canonisation";
 
 function Header({ onScheduleClick }) {
   const nav_links = [
     { label: "Services", href: "#services" },
-    { label: "Events", href: "/events" },
+    { label: "Events", href: "/events/" },
     { label: "Our Clients", href: "#clients" },
 
     { label: "Why us", href: "#why-us" },
-    { label: "Case Studies", href: "/case-studies/remax" },
-    { label: "About", href: "/about" },
+    { label: "Case Studies", href: "/case-studies/remax/" },
+    { label: "About", href: "/about/" },
   ];
 
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function Header({ onScheduleClick }) {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  /*
   useEffect(() => {
     const applyScrollLock = () => {
       const consent = document.cookie.match(/(^| )gdpr_consent=([^;]+)/)?.[2];
@@ -28,13 +29,13 @@ function Header({ onScheduleClick }) {
 
     // Optional: if your banner updates cookie, have it also dispatch:
     // window.dispatchEvent(new Event("gdpr-consent-changed"));
-    window.addEventListener("gdpr-consent-changed", applyScrollLock);
+    //window.addEventListener("gdpr-consent-changed", applyScrollLock);
 
-    return () => {
+    /*return () => {
       window.removeEventListener("gdpr-consent-changed", applyScrollLock);
       document.body.style.overflow = "auto"; // cleanup safety
     };
-  }, []);
+  }, []);*/
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 10);
@@ -129,7 +130,7 @@ function Header({ onScheduleClick }) {
                     {nav.label}
                   </a>
                 ) : (
-                  <Link to={nav.href} onClick={() => setMenuOpen(false)}>
+                  <Link to={canon(nav.href)} onClick={() => setMenuOpen(false)}>
                     {nav.label}
                   </Link>
                 )}

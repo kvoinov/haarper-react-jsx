@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { canon } from "../../helpers/dumb/canonisation";
 
 function ServiceCard(props) {
   return (
-    <Link to={`/services/${props.slug}`} className="service-card-link">
+    <Link to={canon(`/services/${props.slug}`)} className="service-card-link">
       <div className={`service-card ${props.class || ""}`}>
         <div className="service-card-text">
           <h3>{props.title}</h3>

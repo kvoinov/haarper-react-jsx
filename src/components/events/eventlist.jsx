@@ -2,10 +2,11 @@ import EventCard from "./eventcard";
 import { useEffect, useState } from "react";
 import eventAPI from "../../api/eventAPI";
 import Seo from "../main-page/seo";
-import { orgSchema } from "../../../seoSchema";
 
 const btn = "Register Now";
-
+const title = "Upcoming Events | Haarper";
+const description =
+  "Explore our upcoming events hosted by IT experts and digital strategists. Join us to learn, network, and grow your business.";
 function EventList() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,15 +29,14 @@ function EventList() {
 
     loadEvents();
   }, []);
-
+  const canonicalUrl = "https://haarper.pt/events/";
   return (
     <>
       <Seo
-        title="Upcoming Events | Haarper"
-        description="Explore our upcoming events hosted by IT experts and digital strategists. Join us to learn, network, and grow your business."
-        url="https://haarper.pt/events"
-        image="https://haarper.pt/event_img/ai_webinar.jpg"
-        structuredData={orgSchema}
+        title={title}
+        description={description}
+        url={canonicalUrl}
+        type="website"
       />
 
       <section className="events" id="events">

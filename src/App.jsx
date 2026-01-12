@@ -25,13 +25,11 @@ function TrackPageView() {
   return null;
 }
 
-function AppLayout() {
+export function AppLayout() {
   const location = useLocation();
 
   return (
     <>
-      <GDPRConsent />
-
       <Header
         onScheduleClick={
           location.pathname === "/"
@@ -42,21 +40,16 @@ function AppLayout() {
             : undefined
         }
       />
+
       <Routes>
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/consent-required" element={<ConsentRequired />} />
-
-        <Route element={<RequireConsent />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/events" element={<EventList />} />
-          <Route path="/events/:slug" element={<EventDetail />} />
-
-          <Route path="/about" element={<About />} />
-
-          <Route path="/services/:slug" element={<ServicePage />} />
-          <Route path="/case-studies/:slug" element={<CaseStudy />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/events" element={<EventList />} />
+        <Route path="/events/:slug" element={<EventDetail />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services/:slug" element={<ServicePage />} />
+        <Route path="/case-studies/:slug" element={<CaseStudy />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
@@ -66,7 +59,7 @@ function AppLayout() {
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize("G-SB5XZXW4H0"); // Replace with your Measurement ID
+    ReactGA.initialize("G-SB5XZXW4H0");
   }, []);
 
   return (
