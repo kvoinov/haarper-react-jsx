@@ -20,11 +20,7 @@ function Clients() {
       src: "/assets/clients/ikea.avif",
       link: "https://www.ikea.com/pt/pt/",
     },
-    {
-      name: "Parnexus",
-      src: "/assets/clients/parnexus.avif",
-      link: "https://www.parnexus.com/",
-    },
+
     {
       name: "Vodafone",
       src: "/assets/clients/vodafone.avif",
